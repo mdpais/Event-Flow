@@ -1,44 +1,58 @@
 import React from 'react';
 
 function NavTabs({ currentPage, handlePageChange }) {
+
     return (
-        <nav class="navbar" role="navigation" aria-label="main navigation" >
-            <div class="navbar-brand">
-                <a class="navbar-item" href="./">
-                    <img src="./logo192.png" class="nav-logo"></img>
+        <nav className="navbar" role="navigation" aria-label="main navigation" >
+            <div className="navbar-brand">
+                <a className="navbar-item" href="./">
+                    <img src="./logo192.png" className="nav-logo"></img>
                 </a>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
 
-            <div class="space-nav">&nbsp;</div>
+            <div className="tabs is-boxed">
+                <ul>
+                    <li>
+                        <a href="./myevents" onClick={() => handlePageChange('MyEvents')}
+                            className={currentPage === 'MyEvents' ? 'nav-link is-current' : 'nav-link'}>
+                            <span className="icon is-small"><i className="fas fa-image" aria-hidden="true"></i></span>
+                            <span>My Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mytasks" onClick={() => handlePageChange('MyTasks')}
+                            className={currentPage === 'MyTasks' ? 'nav-link is-current' : 'nav-link'}>
+                            <span className="icon is-small"><i className="fas fa-music" aria-hidden="true"></i></span>
+                            <span>My Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./testing" onClick={() => handlePageChange('TestEnv')}
+                            className={currentPage === 'TestEnv' ? 'nav-link is-current' : 'nav-link'}>
+                            <span className="icon is-small"><i className="fas fa-film" aria-hidden="true"></i></span>
+                            <span>test environment</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <div class="buttons">
-                        <a class="button is-light" href="./myevents">
-                            My Events
-                        </a>
-                        <a class="button is-light" href="./mytasks">
-                            My Tasks
-                        </a>
-                        <a class="button is-light" href="./testing">
-                            test environment
-                        </a>
-                    </div>
-                </div>
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary">
+            <div id="navbarBasicExample" className="navbar-menu">
+
+
+                <div className="navbar-end">
+                    <div className="navbar-item">
+                        <div className="buttons">
+                            <a className="button is-primary">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light">
+                            <a className="button is-light">
                                 Log in
                             </a>
                         </div>

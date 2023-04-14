@@ -115,3 +115,7 @@ span.event-list {
 a.div-button {
   color: var(--is-light);
 }
+
+a.is-current span {
+  background-color: var(--is-light);
+}
