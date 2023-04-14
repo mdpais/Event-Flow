@@ -16,7 +16,7 @@ function NavTabs({ currentPage, handlePageChange }) {
                 </a>
             </div>
 
-            <div className="tabs is-boxed">
+            <div className="tabs nav-tabs is-centered is-boxed">
                 <ul>
                     <li>
                         <a href="./myevents" onClick={() => handlePageChange('MyEvents')}

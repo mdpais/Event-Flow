@@ -119,3 +119,8 @@ a.div-button {
 a.is-current span {
   background-color: var(--is-light);
 }
+
+.nav-tabs {
+  margin-top: 6.2rem;
+  margin-bottom: 0rem !important;
+}
