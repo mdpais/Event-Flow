@@ -116,7 +116,7 @@ a.div-button {
   color: var(--is-light);
 }
 
-a.is-current span {
+.is-current {
   background-color: var(--is-light);
 }
 
