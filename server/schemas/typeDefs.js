@@ -64,7 +64,8 @@ type User {
 
 type Query {
   event(id: ID!): Event
-  events: [Event]
+  eventsAsc: [Event]
+  eventsDesc: [Event]
 
   task(id: ID!): Task
   tasks: [Task]!
