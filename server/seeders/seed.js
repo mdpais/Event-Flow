@@ -75,7 +75,7 @@ const tasks = await Task.insertMany([
     "title": "Music arrangement",
         "description": "Arrange for musicians and instruments to be used",
         "assignedTo": sampleUser[0],
-        "deadline": "May 10, 2023",
+        "deadline": "2023-05-10T10:00:00.000-03:00",
         "status": "pending", 
         "event": events[0]
 },
@@ -84,7 +84,7 @@ const tasks = await Task.insertMany([
     "title": "Food logistics",
     "description": "Contact every attendee to know what kind of food each person will be coming with",
     "assignedTo": sampleUser[1],
-    "deadline": "May 8, 2023",
+    "deadline": "2023-05-08T10:00:00.000-03:00",
     "status": "pending",
     "event": events[1]
 },
@@ -94,7 +94,7 @@ const tasks = await Task.insertMany([
     "title": "Transportation",
     "description": "Plan how we would move tothe destination as a group",
     "assignedTo": sampleUser[2],
-    "deadline": "May 8, 2023",
+    "deadline": "2023-05-08T10:00:00.000-03:00",
     "status": "completed",
     "event": events[2]
 },
@@ -103,7 +103,7 @@ const tasks = await Task.insertMany([
     "title": "MC",
         "description": "Get an MC for the event",
         "assignedTo": sampleUser[3],
-        "deadline": "May 8, 2023",
+        "deadline": "2023-05-09T10:00:00.000-03:00",
         "status": "completed",
         "event": events[3]
 },

@@ -45,6 +45,9 @@ const typeDefs = gql`
     event: Event!
   }
 
+
+
+
   type User {
     id: ID!
     userName: String!
@@ -94,7 +97,6 @@ type Query {
       description: String
       assignedTo: ID
       deadline: String
-      completed: Boolean
       event: ID
     ): Task!
     # deleteTask(id: ID!): Boolean!

@@ -16,6 +16,9 @@ const taskResolvers = {
       context
     ) => {
       try {
+        if (!context.user) {
+          throw new Error("Authentication required.");
+        }
         const task = await Task.create({
           title,
           description,
@@ -34,44 +37,48 @@ const taskResolvers = {
 
     updateTask: async (
       parent,
-      { id, title, description, assignedTo, deadline, event },
-      context
+      { id, title, description, assignedTo, deadline, event }
     ) => {
       try {
-        if (!context.user) {
-          throw new Error("Authentication required.");
-        }
-        const task = await Task.findByIdAndUpdate(
+        //   if (!context.user) {
+        //     throw new Error('Authentication required.');
+        // }
+        // const { taskId, taskInput } = args;
+        const updatedTask = await Task.findByIdAndUpdate(
           id,
           { title, description, assignedTo, deadline, event },
           { new: true }
-        ).populate("assignedTo event");
-
-        if (!task) {
-          throw new Error("Task not found");
-        }
-
-        return task;
-      } catch (err) {
-        throw new Error(err);
+        );
+        await User.updateOne(
+          { _id: updatedTask.assignedTo },
+          { $push: { tasks: updatedTask._id } }
+        );
+        await Event.updateOne(
+          { _id: updatedTask.event },
+          { $push: { tasks: updatedTask._id } }
+        );
+        return updatedTask;
+      } catch (error) {
+        console.error(error);
+        throw new Error("Failed to update task");
       }
-      // updateTask: async (
-      //   parent,
-      //   { id, title, description, assignedTo, deadline, status, event },
-      //   context
-      // ) => {
-      //   if (!context.user) {
-      //     throw new Error("Authentication required.");
-      //   }
-      //   const task = await Task.findById(id);
-      //   if (!task) {
-      //     throw new Error("Task not found.");
-      //   }
-      //   if (!task.assignedTo.equals(currentUser._id)) {
-      //     throw new Error("Only the assigned user can update the task.");
-      //   }
-      // },
     },
+    // updateTask: async (
+    //   parent,
+    //   { id, title, description, assignedTo, deadline, status, event },
+    //   context
+    // ) => {
+    //   if (!context.user) {
+    //     throw new Error("Authentication required.");
+    //   }
+    //   const task = await Task.findById(id);
+    //   if (!task) {
+    //     throw new Error("Task not found.");
+    //   }
+    //   if (!task.assignedTo.equals(currentUser._id)) {
+    //     throw new Error("Only the assigned user can update the task.");
+    //   }
+    // },
   },
 };
 
