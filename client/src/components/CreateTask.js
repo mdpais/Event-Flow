@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { useQuery } from '@apollo/client';
+import { ALL_EVENTS } from '../utils/queries';
+
+import { useMutation } from '@apollo/client';
 
 import bulmaCalendar from "bulma-calendar";
+
+import { CREATE_TASK } from '../utils/mutations';
 
 // Initialize all input of date type.
 const calendars = bulmaCalendar.attach('[type="date"]');
@@ -23,16 +30,21 @@ if (element) {
 }
 
 const CreateTask = () => {
+    const { loading, data } = useQuery(ALL_EVENTS);
+    const events = data?.events || [];
     return (
         <div class="hero-body is-justify-content-center is-align-items-center">
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
-                    <label class="label">Created By</label>
+                    <label class="label">Event</label>
                 </div>
                 <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input is-primary" type="text" placeholder="task owner"></input>
+                    <div class="field">           
+                        <div class="select is-normal is-primary">
+                            <select>
+                                <option>Select your Event</option>
+                                <OwnedEvents events= {events} />
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -75,7 +87,7 @@ const CreateTask = () => {
             </div>
             <div class="column is-horizontal">
                 <div class="calendar">
-                    <label for="date" className='event-date'>Event Date</label>
+                    <label for="date" className='event-date'>Deadline</label>
                     <input type="date" data-display-mode="inline" data-is-range="true" data-close-on-select="false"></input>
                 </div>
             </div>
@@ -103,5 +115,23 @@ const CreateTask = () => {
             
     )
 }
+const OwnedEvents = ({ events }) => {
+    if (!events.length) {
+      return <p>No events available</p>;
+    }
+  
+    return (
+      <>
+        {events &&
+          events.map((event) => (
+            <>
+            {(event.isCreated = userID) 
+            ? <option id={event._id}>{event.name}</option>
+            :""}
+           </>
+          ))}
+      </>
+    )
+  }
 
 export default CreateTask;

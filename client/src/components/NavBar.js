@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Auth from '../utils/auth';
+import { useQuery } from '@apollo/client';
+import { LOGGED_IN_USER } from '../utils/queries'
 
 function NavTabs({ currentPage, handlePageChange }) {
     const logout = (event) => {
