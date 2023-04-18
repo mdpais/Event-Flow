@@ -76,6 +76,10 @@ type Query {
     updateEvent(id: ID!, input: EventInput!): Event
     deleteEvent(id: ID!): Event
 
+    acceptPendingEvent(eventId: ID!): User
+    declineEvent(eventId: ID!): User
+
+
     createTask(
       title: String!
       description: String!

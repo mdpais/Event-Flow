@@ -43,7 +43,60 @@ const eventResolvers = {
 
         },
         
-       
+       acceptPendingEvent: async (parent, {eventId}, context) => {
+            
+            if (!context.user) {
+                throw new Error('Authentication required.');
+            }
+            const event = await Event.findByIdAndUpdate(eventId,{
+                //$pull: {invitees: context.user._id},
+                $addToSet: { attendees: context.user._id },
+            }, {new: true }
+            );
+            
+            if (!event) {
+                throw new Error('Event not found.');
+            }
+            const updateUser = await User.findByIdAndUpdate(context.user._id,{
+                $pull:{pendingEvents: event._id},
+                $addToSet:{acceptedEvents: event._id}},
+                {new: true}
+                );
+
+                
+            await updateUser.populate('pendingEvents acceptedEvents ownedEvents tasks');
+                         
+            return updateUser;
+        },
+
+        declineEvent: async(parent, {eventId}, context) => {
+            console.log("DECLINE");
+            console.log(context.user);
+            if (!context.user) {
+                throw new Error('Authentication required.');
+            }
+
+            const event = await Event.findByIdAndUpdate(eventId,{
+                $pull:{invitees: context.user._id, 
+                       attendees: context.user._id}},
+                {new: true}
+            );
+            
+            if(!event){
+                throw new Error('Event not found.');
+            }
+            
+            const updatedUser = await User.findByIdAndUpdate(context.user._id,{
+                $pull: {pendingEvents: event._id,
+                        acceptedEvents:event._id},
+            }, 
+            {new: true}).populate('pendingEvents acceptedEvents ownedEvents tasks');
+            
+
+
+            
+            return updatedUser;
+        },
 
         updateEvent: async (parent, { id, input }, context) => {
             if (!context.user) {
