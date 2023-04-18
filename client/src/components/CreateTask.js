@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { useQuery } from '@apollo/client';
 import { ALL_EVENTS } from '../utils/queries';
+import Auth from '../utils/auth';
 
 import { useMutation } from '@apollo/client';
 
@@ -32,6 +33,7 @@ if (element) {
 const CreateTask = () => {
     const { loading, data } = useQuery(ALL_EVENTS);
     const events = data?.events || [];
+    console.log(events);
     return (
         <div class="hero-body is-justify-content-center is-align-items-center">
             <div class="field is-horizontal">
@@ -116,6 +118,9 @@ const CreateTask = () => {
     )
 }
 const OwnedEvents = ({ events }) => {
+
+    const userID = Auth.getProfile().data._id;
+    
     if (!events.length) {
       return <p>No events available</p>;
     }
@@ -125,7 +130,7 @@ const OwnedEvents = ({ events }) => {
         {events &&
           events.map((event) => (
             <>
-            {(event.isCreated = userID) 
+            {(event.createdBy.id == userID) 
             ? <option id={event._id}>{event.name}</option>
             :""}
            </>
