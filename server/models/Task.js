@@ -18,6 +18,7 @@ const taskSchema = new Schema({
     type: Date,
     default: new Date(),
     get: (deadline) => deadline.toDateString()
+
   },
   status: {
     type: String,
