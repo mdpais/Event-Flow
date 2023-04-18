@@ -1,10 +1,6 @@
 const { Event, User } = require("../models");
 const eventResolvers = {
     Query: {
-        events: async () => {
-            const events = await Event.find().populate('createdBy attendees invitees tasks');
-            return events;
-        },
         eventsDesc: async () => {
             const events = await Event.find().populate('createdBy attendees invitees tasks').sort({startDate:'desc'});
             return events;
