@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "643f4cc65e799cbfbcf745ad"
+  },
+  "title": "Prepare presentation",
+  "description": "presentation about the boot camp in 2023",
+  "assignedTo": {
+    "$oid": "643f489e5e799cbfbcf74588"
+  },
+  "deadline": {
+    "$date": "2023-04-25T03:00:00.000Z"
+  },
+  "status": "pending",
+  "event": {
+    "$oid": "643f4bd15e799cbfbcf745a5"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f4d254086207c1b913459"
+  },
+  "title": "Prepare presentation",
+  "description": "presentation about the boot camp in 2023",
+  "assignedTo": {
+    "$oid": "643f489e5e799cbfbcf74588"
+  },
+  "deadline": {
+    "$date": "2023-04-25T03:00:00.000Z"
+  },
+  "status": "pending",
+  "event": {
+    "$oid": "643f4bd15e799cbfbcf745a5"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f4e1d4086207c1b91345f"
+  },
+  "title": "Award Prizes",
+  "description": "distribute prizes for outstanding students",
+  "assignedTo": {
+    "$oid": "643f48aa5e799cbfbcf7458a"
+  },
+  "deadline": {
+    "$date": "2023-04-28T03:00:00.000Z"
+  },
+  "status": "pending",
+  "event": {
+    "$oid": "643f4bd15e799cbfbcf745a5"
+  },
+  "__v": 0
+}]

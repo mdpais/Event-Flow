@@ -1,0 +1,463 @@
+[{
+  "_id": {
+    "$oid": "643ac06f8257d1182696e0ee"
+  },
+  "name": "My Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ac0ad8e06857904e30a80"
+  },
+  "name": "My Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad251e5210645b1a5bc0b"
+  },
+  "name": "yara33 Birthday",
+  "description": "description 33",
+  "startDate": "4/6/2023",
+  "endDate": "4/7/2023",
+  "type": "business",
+  "isPrivate": false,
+  "location": "tims",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    },
+    {
+      "$oid": "6439d00b1c3e7b98e6c0fdba"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad2d40b140c390b85be37"
+  },
+  "name": "yasmeen Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad2e00b140c390b85be3a"
+  },
+  "name": "yasmeen Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad30920a30c794f2d080b"
+  },
+  "name": "yasmeen Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad3c3207772a845aefdab"
+  },
+  "name": "yasmeen Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad3d72f5c996aa39170c1"
+  },
+  "name": "yasmeen Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad46579b6768c75073265"
+  },
+  "name": "yasmeen Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad6ad55f6cddfbbaa5d61"
+  },
+  "name": "yara Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643ad72755f6cddfbbaa5d68"
+  },
+  "name": "yara Birthday",
+  "description": "",
+  "startDate": "4/15/2023",
+  "endDate": "4/15/2023",
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "attendees": [
+    {
+      "$oid": "6439ccd32242e41ae7545ef7"
+    }
+  ],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e2c1637f198c433d157de"
+  },
+  "name": "Yahia Birthday",
+  "description": "",
+  "startDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [
+    {
+      "$oid": "6439d347f401a66d784e74ac"
+    }
+  ],
+  "invitees": [
+    {
+      "$oid": "6439ce94e4680bfc3dbbf296"
+    },
+    {
+      "$oid": "6439ccd32242e41ae7545ef7"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e2c2c37f198c433d157e7"
+  },
+  "name": "Yahia Birthday",
+  "description": "",
+  "startDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [
+    {
+      "$oid": "6439d347f401a66d784e74ac"
+    }
+  ],
+  "invitees": [
+    {
+      "$oid": "6439ce94e4680bfc3dbbf296"
+    },
+    {
+      "$oid": "6439ccd32242e41ae7545ef7"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e2cb937f198c433d157f0"
+  },
+  "name": "Yahia Birthday",
+  "description": "",
+  "startDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [
+    {
+      "$oid": "6439d347f401a66d784e74ac"
+    }
+  ],
+  "invitees": [
+    {
+      "$oid": "6439ce94e4680bfc3dbbf296"
+    },
+    {
+      "$oid": "6439ccd32242e41ae7545ef7"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e2d5b37f198c433d15805"
+  },
+  "name": "Yahia Birthday",
+  "description": "",
+  "startDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "type": "personal",
+  "isPrivate": true,
+  "location": "Mcdonlad",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [
+    {
+      "$oid": "6439d347f401a66d784e74ac"
+    }
+  ],
+  "invitees": [
+    {
+      "$oid": "6439ce94e4680bfc3dbbf296"
+    },
+    {
+      "$oid": "6439ccd32242e41ae7545ef7"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f4a685e799cbfbcf74597"
+  },
+  "name": "Team Meeting",
+  "description": "A weekly team meeting",
+  "startDate": {
+    "$date": "2023-04-25T03:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-25T03:00:00.000Z"
+  },
+  "type": "Educational",
+  "isPrivate": true,
+  "location": "456 Main St",
+  "createdBy": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "6439ce52e4680bfc3dbbf294"
+    },
+    {
+      "$oid": "643f48685e799cbfbcf74582"
+    },
+    {
+      "$oid": "643f487c5e799cbfbcf74584"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f4bd15e799cbfbcf745a5"
+  },
+  "name": "Graduation Party",
+  "description": "Graduation 2023",
+  "startDate": {
+    "$date": "2023-04-28T03:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2023-04-29T03:00:00.000Z"
+  },
+  "type": "Social",
+  "isPrivate": false,
+  "location": "456 Main St",
+  "createdBy": {
+    "$oid": "643f48895e799cbfbcf74586"
+  },
+  "attendees": [],
+  "invitees": [
+    {
+      "$oid": "643f4a685e799cbfbcf74597"
+    },
+    {
+      "$oid": "643f487c5e799cbfbcf74584"
+    },
+    {
+      "$oid": "643f489e5e799cbfbcf74588"
+    },
+    {
+      "$oid": "643f48435e799cbfbcf74580"
+    }
+  ],
+  "tasks": [
+    {
+      "$oid": "643f4cc65e799cbfbcf745ad"
+    },
+    {
+      "$oid": "643f4d254086207c1b913459"
+    },
+    {
+      "$oid": "643f4e1d4086207c1b91345f"
+    }
+  ],
+  "__v": 0
+}]

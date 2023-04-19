@@ -1,0 +1,291 @@
+[{
+  "_id": {
+    "$oid": "6439ccd32242e41ae7545ef7"
+  },
+  "userName": "shaimaa",
+  "email": "shaimaa@mail.com",
+  "password": "$2b$10$ablOhiDsJehK3jaTOWvuC.0lkac3vWlxe60rMp5/OY0IpeI8e/kc6",
+  "pendingEvents": [
+    {
+      "$oid": "643e2c1637f198c433d157de"
+    },
+    {
+      "$oid": "643e2c2c37f198c433d157e7"
+    },
+    {
+      "$oid": "643e2cb937f198c433d157f0"
+    },
+    {
+      "$oid": "643e2d5b37f198c433d15805"
+    }
+  ],
+  "acceptedEvents": [
+    {
+      "$oid": "643ad2d40b140c390b85be37"
+    },
+    {
+      "$oid": "643ad2e00b140c390b85be3a"
+    },
+    {
+      "$oid": "643ad3c3207772a845aefdab"
+    },
+    {
+      "$oid": "643ad3d72f5c996aa39170c1"
+    },
+    {
+      "$oid": "643ad46579b6768c75073265"
+    },
+    {
+      "$oid": "643d75f17ce45236bc76e80b"
+    },
+    {
+      "$oid": "643ad72755f6cddfbbaa5d68"
+    }
+  ],
+  "tasks": [],
+  "__v": 0,
+  "ownedEvents": [
+    {
+      "$oid": "643ad6ad55f6cddfbbaa5d61"
+    },
+    {
+      "$oid": "643ad72755f6cddfbbaa5d68"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6439ce52e4680bfc3dbbf294"
+  },
+  "userName": "shaimaa2",
+  "email": "shaimaa2@mail.com",
+  "password": "$2b$10$bZ6Ww6FIWY40Ppj4NkWyBOsB8XDncz3dcVjj66Ie8Z3a94WyT8pP2",
+  "pendingEvents": [
+    {
+      "$oid": "643f4a685e799cbfbcf74597"
+    }
+  ],
+  "acceptedEvents": [
+    {
+      "$oid": "643ad3c3207772a845aefdab"
+    },
+    {
+      "$oid": "643e2c1637f198c433d157de"
+    },
+    {
+      "$oid": "643e2c2c37f198c433d157e7"
+    },
+    {
+      "$oid": "643f4a685e799cbfbcf74597"
+    }
+  ],
+  "tasks": [],
+  "__v": 0,
+  "ownedEvents": [
+    {
+      "$oid": "643e2c1637f198c433d157de"
+    },
+    {
+      "$oid": "643e2c2c37f198c433d157e7"
+    },
+    {
+      "$oid": "643e2cb937f198c433d157f0"
+    },
+    {
+      "$oid": "643e2d5b37f198c433d15805"
+    },
+    {
+      "$oid": "643f4a685e799cbfbcf74597"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6439ce94e4680bfc3dbbf296"
+  },
+  "userName": "shaimaa3",
+  "email": "shaimaa3@mail.com",
+  "password": "$2b$10$ddSFVNxTn3shrk71l0Wf8eNZfxUG5BSITe7uzcGuCzikLwN/aWjrK",
+  "pendingEvents": [
+    {
+      "$oid": "643e2c1637f198c433d157de"
+    },
+    {
+      "$oid": "643e2c2c37f198c433d157e7"
+    },
+    {
+      "$oid": "643e2cb937f198c433d157f0"
+    },
+    {
+      "$oid": "643e2d5b37f198c433d15805"
+    }
+  ],
+  "acceptedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6439d00b1c3e7b98e6c0fdba"
+  },
+  "userName": "shaimaa4",
+  "email": "shaimaa4@mail.com",
+  "password": "$2b$10$7h7ecvzX5YJBFZRvNdzHtOann54zXX873oeuRE0262sCPlnbFk1ha",
+  "pendingEvents": [],
+  "acceptedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6439d0ee52ddb56a41e80e31"
+  },
+  "userName": "shaimaa6",
+  "email": "shaimaa6@mail.com",
+  "password": "$2b$10$kBQmtwPlLvNOheIgcoPqku41U/S5wqRd9AzV1DUtflB5Fs.P8zn0S",
+  "pendingEvents": [],
+  "acceptedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6439d1e9f401a66d784e74a9"
+  },
+  "userName": "shaimaa5",
+  "email": "shaimaa5@mail.com",
+  "password": "$2b$10$PY4EKznMw7Da5mxCv5H.O.iOuehCD334Bvisg76Q3JFMANZ5xQeqC",
+  "pendingEvents": [],
+  "acceptedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6439d347f401a66d784e74ac"
+  },
+  "userName": "shaimaa7",
+  "email": "shaimaa7@mail.com",
+  "password": "$2b$10$Ic7y3O70N9TqlEm79SdtTeVnup7oXqNQKudBMbc7YNRf0Mr1PlSsK",
+  "pendingEvents": [],
+  "acceptedEvents": [
+    {
+      "$oid": "643e2c1637f198c433d157de"
+    },
+    {
+      "$oid": "643e2c2c37f198c433d157e7"
+    },
+    {
+      "$oid": "643e2cb937f198c433d157f0"
+    },
+    {
+      "$oid": "643e2d5b37f198c433d15805"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f48435e799cbfbcf74580"
+  },
+  "userName": "Victoria",
+  "email": "victoria@mail.com",
+  "password": "$2b$10$KBNmp8Gm1a1GAQyjB6EJNux/FVzympKJWlOMZPKWSxb3S0YL72i/K",
+  "pendingEvents": [
+    {
+      "$oid": "643f4bd15e799cbfbcf745a5"
+    }
+  ],
+  "acceptedEvents": [],
+  "ownedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f48685e799cbfbcf74582"
+  },
+  "userName": "Buky",
+  "email": "buky@mail.com",
+  "password": "$2b$10$IuerBcklL5u8d1anqiWZHeT5TaVxrrPcLeakaCGxiHN8bvQ50F/j2",
+  "pendingEvents": [
+    {
+      "$oid": "643f4a685e799cbfbcf74597"
+    }
+  ],
+  "acceptedEvents": [],
+  "ownedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f487c5e799cbfbcf74584"
+  },
+  "userName": "Marie",
+  "email": "marie@mail.com",
+  "password": "$2b$10$6t7o3zxWpi2kN7NcqQcuUun72OlPvfzOND6J2c2DFMUw6JcnbFd1K",
+  "pendingEvents": [
+    {
+      "$oid": "643f4a685e799cbfbcf74597"
+    },
+    {
+      "$oid": "643f4bd15e799cbfbcf745a5"
+    }
+  ],
+  "acceptedEvents": [],
+  "ownedEvents": [],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f48895e799cbfbcf74586"
+  },
+  "userName": "Roger",
+  "email": "roger@mail.com",
+  "password": "$2b$10$hOIPM1lu7LRPa12w1QT/FeBqtbScMNNWz.dLaW5nGZQ9RuEhvLo2O",
+  "pendingEvents": [],
+  "acceptedEvents": [
+    {
+      "$oid": "643f4bd15e799cbfbcf745a5"
+    }
+  ],
+  "ownedEvents": [
+    {
+      "$oid": "643f4bd15e799cbfbcf745a5"
+    }
+  ],
+  "tasks": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f489e5e799cbfbcf74588"
+  },
+  "userName": "Kevin",
+  "email": "kevin@mail.com",
+  "password": "$2b$10$L3Tf.7zfSm/6xCkysAMj1ehQImGWV0N/Juhx7gJqH188ldTB8h3xO",
+  "pendingEvents": [
+    {
+      "$oid": "643f4bd15e799cbfbcf745a5"
+    }
+  ],
+  "acceptedEvents": [],
+  "ownedEvents": [],
+  "tasks": [
+    {
+      "$oid": "643f4cc65e799cbfbcf745ad"
+    },
+    {
+      "$oid": "643f4d254086207c1b913459"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643f48aa5e799cbfbcf7458a"
+  },
+  "userName": "Daniel",
+  "email": "daniel@mail.com",
+  "password": "$2b$10$1booeRe4dCR4w7IrmCFv6unW2jrZxGsEpQl8bHpCWyYxvfpA8FqLy",
+  "pendingEvents": [],
+  "acceptedEvents": [],
+  "ownedEvents": [],
+  "tasks": [
+    {
+      "$oid": "643f4e1d4086207c1b91345f"
+    }
+  ],
+  "__v": 0
+}]
