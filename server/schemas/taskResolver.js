@@ -1,8 +1,9 @@
 const { Event, Task, User } = require("../models");
 const taskResolvers = {
   Query: {
+
     tasks: async () => {
-      return await Task.find().populate("assignedTo").populate("event");
+      return await Task.find().populate('assignedTo').populate('event');
     },
 
     task: async (parent, { id }) => {
@@ -40,8 +41,8 @@ const taskResolvers = {
       { id, title, description, assignedTo, deadline, event }
     ) => {
       try {
-          if (!context.user) {
-            throw new Error('Authentication required.');
+        if (!context.user) {
+          throw new Error('Authentication required.');
         }
         // const { taskId, taskInput } = args;
         const updatedTask = await Task.findByIdAndUpdate(
@@ -63,22 +64,7 @@ const taskResolvers = {
         throw new Error("Failed to update task");
       }
     },
-    // updateTask: async (
-    //   parent,
-    //   { id, title, description, assignedTo, deadline, status, event },
-    //   context
-    // ) => {
-    //   if (!context.user) {
-    //     throw new Error("Authentication required.");
-    //   }
-    //   const task = await Task.findById(id);
-    //   if (!task) {
-    //     throw new Error("Task not found.");
-    //   }
-    //   if (!task.assignedTo.equals(currentUser._id)) {
-    //     throw new Error("Only the assigned user can update the task.");
-    //   }
-    // },
+    
   },
 };
 

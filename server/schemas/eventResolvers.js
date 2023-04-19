@@ -19,9 +19,9 @@ const eventResolvers = {
         },
     },
     Mutation: {
-        
-
+       
         createEvent: async (parent, { input }, context) => {
+            console.log("=====inside create event");
             if (!context.user) {
                 throw new Error('Authentication required.');
             }
@@ -31,9 +31,6 @@ const eventResolvers = {
             const event = await Event.create(input);
 
             await User.updateOne({ _id: event.createdBy }, { $push: { ownedEvents: event._id } });
-            //add the event to the accepted events of the user
-            await User.updateOne({ _id: event.createdBy }, { $push: { acceptedEvents: event._id } });
-            
             await User.updateMany({ _id: { $in: event.attendees } }, { $push: { acceptedEvents: event._id } });
             await User.updateMany({ _id: { $in: event.invitees } }, { $push: { pendingEvents: event._id } });
 
@@ -113,13 +110,7 @@ const eventResolvers = {
             if (!event.createdBy.equals(context.user._id)) {
                 throw new Error('Only the owner of the event can update it.');
             }
-            //to update the invitees, i should remove the event from all the old invitees and then add the event to new invitess
-            //the event owner will never delete invitee .. he just add
-           // await user.findByIdAndUpdate({_id:{$in: event.invitees}},  {$pull:{pendingEvents: event._id}});
-
             const updatedEvent = await Event.findByIdAndUpdate(id, input, { new: true }).populate('createdBy attendees invitees tasks');
-            await User.updateMany({ _id: { $in: updatedEvent.invitees } }, { $push: { pendingEvents: updatedEvent._id } });
-
             return updatedEvent;
         },
 
@@ -135,37 +126,11 @@ const eventResolvers = {
             if (!event.createdBy.equals(context.user._id)) {
                 throw new Error('Only the owner of the event can delete it.');
             }
-            console.log(event.invitees);
-            await User.updateOne({_id: event.createdBy}, {$pull: {ownedEvents: event._id}});
-            await User.updateMany({_id: {$in: event.invitees}}, {$pull: {pendingEvents: event._id}});
-            await User.updateMany({_id: {$in: event.attendees}}, {$pull: {acceptedEvents: event._id}});
 
             const deletedEvent = await Event.findByIdAndDelete(id).populate('createdBy attendees invitees tasks');
-            
+
             return deletedEvent;
         },
     }
 };
 module.exports = eventResolvers;
-
-// createEvent: async (parent, { title, description, startDate, endDate, type, location , isPrivate,  invitees, attendees, tasks}, context) => {
-
-        //     if (!context.user) {
-        //         throw new Error('Authentication required.');
-        //     }
-        //     const event = new Event({
-        //         title,
-        //         description,
-        //         startDate,
-        //         endDate,
-        //         type,
-        //         location,
-        //         isPrivate,
-        //         createdBy: context.user._id,
-        //         attendees,
-        //         invitees,                
-        //         tasks
-        //     });
-        //     await event.save();
-        //     return event;
-        // },
