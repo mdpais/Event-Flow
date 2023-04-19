@@ -4,10 +4,7 @@ const userResolvers = require('./userResolvers');
 const taskResolvers = require('./taskResolver');
 
 const resolvers = {
-    //     ...userResolvers,
-    // ...eventResolvers,
-    // ...taskResolvers
-
+   
     Query:{
             ...userResolvers.Query,
             ...eventResolvers.Query,
