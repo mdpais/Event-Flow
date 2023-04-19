@@ -63,6 +63,7 @@ const typeDefs = gql`
   
 type Query {
   event(id: ID!): Event
+  events: [Event]
   eventsAsc: [Event]
   eventsDesc: [Event]
 
