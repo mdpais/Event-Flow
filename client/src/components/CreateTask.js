@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import { useQuery } from '@apollo/client';
-import { ALL_EVENTS } from '../utils/queries';
+import { ALL_EVENTS, All_Users } from '../utils/queries';
+
 import Auth from '../utils/auth';
 
 import { useMutation } from '@apollo/client';
@@ -31,9 +32,14 @@ if (element) {
 }
 
 const CreateTask = () => {
-    const { loading, data } = useQuery(ALL_EVENTS);
-    const events = data?.events || [];
-    console.log(events);
+    const { data: data1 } = useQuery(ALL_EVENTS)
+    console.log(data1);
+    const events = data1?.events || [];
+
+    const { data: data2 } = useQuery(All_Users)
+    const users = data2?.users || [];
+
+   
     return (
         <div class="hero-body is-justify-content-center is-align-items-center">
             <div class="field is-horizontal">
@@ -51,33 +57,32 @@ const CreateTask = () => {
                     </div>
                 </div>
             </div>
+            <div class="field-body">
+                    <div class="field">           
+                        <div class="select is-normal is-primary">
+                            <select>
+                                <option>Assign to a User</option>
+                                <EventUsers users= {users} />
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
-                    <label class="label">Assigned To</label>
+                    <label class="label">Description</label>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input is-primary" type="text" placeholder="assignee"></input>
+                            <input class="input is-primary" type="text" placeholder="description"></input>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
-                    <label class="label">Event Title</label>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input is-primary" type="text" placeholder="event title"></input>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Task</label>
+                    <label class="label">Title</label>
                 </div>
                 <div class="field-body">
                     <div class="field">
@@ -138,5 +143,28 @@ const OwnedEvents = ({ events }) => {
       </>
     )
   }
+
+  const EventUsers = ({ users }) => {
+
+    const userID = Auth.getProfile().data._id;
+
+    if (!users.length) {
+        return <p>No users available</p>;
+      }
+
+      return (
+        <>
+          {users &&
+            users.map((user) => (
+              <>
+              {(user.id == userID) 
+              ? ""
+              :<option id={user.id}>{user.userName}</option>}
+             </>
+            ))}
+        </>
+      )
+    }
+  
 
 export default CreateTask;

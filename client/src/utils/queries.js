@@ -1,76 +1,15 @@
 import { gql } from '@apollo/client';
 
 export const All_Users = gql`
-query Users {
-    users {
-      id
-      userName
-      email
-      password
-      pendingEvents {
-        _id
-        name
-        description
-        startDate
-        endDate
-        type
-        isPrivate
-        location
-        createdBy {
-          id
-          userName
-          email
-          password
-        }
-        attendees {
-          id
-          userName
-          email
-          password
-        }
-        invitees {
-          id
-          userName
-          email
-          password
-        }
-      }
-      acceptedEvents {
-        _id
-        name
-        description
-        startDate
-        endDate
-        type
-        isPrivate
-        location
-      }
-      tasks {
-        id
-        title
-        description
-        assignedTo {
-          id
-          userName
-          email
-          password
-        }
-        deadline
-        completed
-        event {
-          _id
-          name
-          description
-          startDate
-          endDate
-          type
-          isPrivate
-          location
-        }
-      }
-    }
+query users {
+  users {
+    id
+    userName
+    email
+    password
   }
-  `;
+}
+`;
 
 export const LOGGED_IN_USER = gql`
 query LoggedinUser($userId: ID!) {
