@@ -1,11 +1,13 @@
 const { gql } = require("apollo-server-express");
 
+
 const typeDefs = gql` 
 
   type Auth {
     token: ID!
     user: User
   }
+
 
 
   type Event {
@@ -22,6 +24,7 @@ const typeDefs = gql`
     invitees: [User!]
     tasks: [Task]
   }
+  
   
   input EventInput {
     name: String!
@@ -77,6 +80,7 @@ type Query {
   me: User
     
 }
+
 
 
   type Mutation {

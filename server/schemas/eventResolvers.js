@@ -107,7 +107,7 @@ const eventResolvers = {
             if (!event) {
                 throw new Error('Event not found.');
             }
-            if (!event.createdBy.equals(context.user._id)) {
+            if (!event.owner.equals(context.user._id)) {
                 throw new Error('Only the owner of the event can update it.');
             }
             const updatedEvent = await Event.findByIdAndUpdate(id, input, { new: true }).populate('createdBy attendees invitees tasks');
@@ -123,11 +123,12 @@ const eventResolvers = {
             if (!event) {
                 throw new Error('Event not found.');
             }
-            if (!event.createdBy.equals(context.user._id)) {
+            if (!event.owner.equals(context.user._id)) {
                 throw new Error('Only the owner of the event can delete it.');
             }
 
             const deletedEvent = await Event.findByIdAndDelete(id).populate('createdBy attendees invitees tasks');
+
 
             return deletedEvent;
         },
