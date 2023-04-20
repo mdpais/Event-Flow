@@ -15,8 +15,9 @@ const taskSchema = new Schema({
     required: true
   },
   deadline: {
-    type: String,
-    required: false
+    type: Date,
+    default: new Date(),
+    get: (deadline) => deadline.toDateString()
   },
   status: {
     type: String,
