@@ -65,4 +65,3 @@ const addDateSuffix = (date) => {
   
     return formattedTimeStamp;
   };
-  
